@@ -2,8 +2,16 @@
 # Sam.Wrappers
 
 [![](https://github.com/samanazadi1996/Sam.Wrappers/workflows/.NET/badge.svg)](https://github.com/samanazadi1996/Sam.Wrappers/actions)
+[![NuGet](https://img.shields.io/nuget/vpre/Sam.Wrappers.svg)](https://www.nuget.org/packages/Sam.Wrappers)
 
 This package contains classes and methods designed for managing operation results, errors, and paginated responses in .NET applications.
+
+## Installation
+
+To install the Sam.File Table Framework package, simply use the following command
+```sh
+dotnet add package Sam.Wrappers
+```
 
 ## Features
 
@@ -20,11 +28,7 @@ This package contains classes and methods designed for managing operation result
 - **[Error](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/Error.cs) and [ErrorCode](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/ErrorCode.cs)**:
   - Define errors with an `ErrorCode` enum that covers standard HTTP status codes and custom application-specific errors.
   - Structure errors with optional descriptions and field names for context.
-<!--
-## Installation
 
-To use this package in your project, you can add the corresponding files directly to your project or use a package management tool like `NuGet`.
- -->
 ## Usage
 
 ### BaseResult
