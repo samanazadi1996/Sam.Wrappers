@@ -15,13 +15,13 @@ dotnet add package Sam.Wrappers
 
 ## Features
 
-- **[BaseResult](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/BaseResult.cs#L7-L37) and [BaseResult<T>](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/BaseResult.cs#L39-L62)**: 
+- **[BaseResult](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/BaseResult.cs#L7-L37) and [BaseResult&#60;T>](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/BaseResult.cs#L39-L62)**: 
   - Handle operation results with an indication of success or failure.
   - Provide support for single or multiple errors.
   - Allow chaining and adding errors post-creation.
   - Implicitly convert from error or list of errors to `BaseResult` for flexible error handling.
 
-- **[PagedResponse<T>](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/PagedResponse.cs)**: 
+- **[PagedResponse&#60;T>](https://github.com/samanazadi1996/Sam.Wrappers/blob/main/Source/Sam.Wrappers/PagedResponse.cs)**: 
   - Manage paginated data responses, encapsulating data along with pagination metadata like page number, total pages, and total items.
   - Includes static factory methods to quickly generate paginated results.
 
@@ -57,7 +57,7 @@ using System.Collections.Generic;
 // Sample data
 var data = new List<string> { "Item1", "Item2", "Item3" };
 int pageNumber = 1;
-int pageSize = 2;
+int pageSize = 3;
 int totalCount = 3;
 
 // Create a paginated response
