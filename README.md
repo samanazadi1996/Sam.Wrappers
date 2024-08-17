@@ -61,7 +61,7 @@ int pageSize = 2;
 int totalCount = 3;
 
 // Create a paginated response
-var pagedResponse = PagedResponse<string>.Ok(data, pageNumber, pageSize, totalCount);
+var pagedResponse = PagedResponse<string>.Ok(data, totalCount, pageNumber, pageSize);
 ```
 
 ### Error and ErrorCode
