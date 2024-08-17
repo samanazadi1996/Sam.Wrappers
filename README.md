@@ -8,7 +8,7 @@ This package contains classes and methods designed for managing operation result
 
 ## Installation
 
-To install the Sam.File Table Framework package, simply use the following command
+To install the Sam.Wrappers package, simply use the following command
 ```sh
 dotnet add package Sam.Wrappers
 ```
