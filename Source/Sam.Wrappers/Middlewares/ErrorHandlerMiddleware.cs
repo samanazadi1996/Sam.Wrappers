@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System.Text.Json;
 using System.Threading.Tasks;
 
-namespace Sam.Wrappers.Infrastructure
+namespace Sam.Wrappers.Middlewares
 {
     public class ErrorHandlerMiddleware
     {
@@ -22,7 +22,7 @@ namespace Sam.Wrappers.Infrastructure
             {
                 await _next(context);
             }
-            catch (AppException.ApplicationException applicationException)
+            catch (AppException applicationException)
             {
                 context.Response.ContentType = "application/json";
 

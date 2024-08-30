@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Builder;
-using Sam.Wrappers.Infrastructure;
+using Sam.Wrappers.Middlewares;
 using System;
 using System.Text.Json;
 
@@ -7,17 +7,18 @@ namespace Microsoft.Extensions.DependencyInjection
 {
     public static class ServiceRegistration
     {
-        public static IServiceCollection AddAppExceptionOptions(this IServiceCollection services, Action<AppExceptionHandlerOptions>? options = null)
+        public static IServiceCollection ConfigureAppExceptionHandling(this IServiceCollection services, Action<AppExceptionHandlerOptions>? configureOptions = null)
         {
             var appExceptionHandlerOptions = new AppExceptionHandlerOptions();
 
-            options?.Invoke(appExceptionHandlerOptions);
+            configureOptions?.Invoke(appExceptionHandlerOptions);
 
             services.AddSingleton(appExceptionHandlerOptions);
 
             return services;
         }
-        public static IApplicationBuilder UseAppExceptionHandler(this IApplicationBuilder app)
+
+        public static IApplicationBuilder UseAppExceptionHandling(this IApplicationBuilder app)
         {
             app.UseMiddleware<ErrorHandlerMiddleware>();
 

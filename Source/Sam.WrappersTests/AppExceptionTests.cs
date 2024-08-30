@@ -12,7 +12,7 @@ public class AppExceptionTests
         var expectedMessage = "Test error message";
 
         // Act & Assert
-        var exception = Assert.Throws<AppException.ApplicationException>(() =>
+        var exception = Assert.Throws<AppException>(() =>
             AppException.Throw(expectedErrorCode, expectedMessage));
 
         // Assert

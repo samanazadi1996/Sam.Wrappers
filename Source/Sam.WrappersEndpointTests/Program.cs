@@ -1,5 +1,3 @@
-using System.Text.Json;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
@@ -7,7 +5,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddAppExceptionOptions(p =>
+builder.Services.ConfigureAppExceptionHandling(p =>
 {
     //p.StatusCode = 400;
     //p.JsonSerializerOptions = new JsonSerializerOptions()
@@ -18,7 +16,7 @@ builder.Services.AddAppExceptionOptions(p =>
 
 var app = builder.Build();
 
-app.UseAppExceptionHandler();
+app.UseAppExceptionHandling();
 
 if (app.Environment.IsDevelopment())
 {
