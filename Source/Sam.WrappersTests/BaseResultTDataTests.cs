@@ -51,8 +51,8 @@ public class BaseResultTDataTests
         // Arrange
         var errors = new List<Error>
         {
-            new Error(ErrorCode.BadRequest, "Bad request"),
-            new Error(ErrorCode.NotFound, "Not found")
+            new(ErrorCode.BadRequest, "Bad request"),
+            new(ErrorCode.NotFound, "Not found")
         };
 
         // Act
@@ -99,8 +99,8 @@ public class BaseResultTDataTests
         // Arrange
         var errors = new List<Error>
         {
-            new Error(ErrorCode.BadRequest, "Bad request"),
-            new Error(ErrorCode.NotFound, "Not found")
+            new(ErrorCode.BadRequest, "Bad request"),
+            new(ErrorCode.NotFound, "Not found")
         };
 
         // Act
